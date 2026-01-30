@@ -1,5 +1,9 @@
 import pytest
+import sys
+import os
 from src import calculator
+project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+sys.path.insert(0, project_root)
 
 def test_fun1():
     assert calculator.fun1(2, 3) == 5

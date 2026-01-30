@@ -1,11 +1,12 @@
 import sys
 import os
-import unittest
 
-# Get the path to the project's root directory
+# Add project root to Python path FIRST
 project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-sys.path.append(project_root)
+sys.path.insert(0, project_root)
 
+# THEN import
+import unittest  # ← CHANGED from pytest
 from src import calculator
 
 
